@@ -59,7 +59,7 @@ class RedirecttoUserShopPage(Action):
            msg = f"Redirecting you to the Shop Page: {employee_name}, {email}"
 
         else: 
-           msg = f"Shop not found with provided email address:"
+           msg = "Shop not found with provided email address:"
 
         dispatcher.utter_message(msg )
         return [SlotSet("email", None)]

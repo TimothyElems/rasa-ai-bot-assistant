@@ -52,7 +52,7 @@ class RedirecttoUserShopPage(Action):
         url = "https://dummy.restapiexample.com/api/v1/employees/1"
         # payload = {"q": city, "appid": api_token, "units": "metric", "lang": "en"}
         
-        response = requests.get(url)
+        response = requests.get(url, timeout=60)
         if response.ok:
            response_data = response.json()
            employee_name = response_data["data"]["employee_name"]
